@@ -43,6 +43,11 @@ vim.keymap.set("n", "<leader>-", "^i~~<Esc>A~~<Esc>")
 vim.keymap.set("n", "<leader>da", "0i## []<Esc>\"=strftime(\"%a %Y-%m-%d\")<CR>P")
 vim.keymap.set("n", "<leader>ti", "\"=strftime(\"%I:%M\")<CR>P")
 
+-- Time keeping for notes
+vim.keymap.set("n", "<leader>nda", "0i## []<Esc>\"=strftime(\"%a %Y-%m-%d\")<CR>PA<CR>| Start | Finish | Description |<CR>|-------|--------|-------------|<CR>")
+vim.keymap.set("n", "<leader>ne", "0i|  <Esc>\"=strftime(\"%I:%M\")<CR>Pa |   | ")
+vim.keymap.set("n", "<leader>tt", "0f|2l\"=strftime(\"%I:%M\")<CR>P")
+
 vim.keymap.set("n", "<CR>", "o<Esc>")
 
 -- Comment and uncomment
