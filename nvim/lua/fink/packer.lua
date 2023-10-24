@@ -15,18 +15,18 @@ return require('packer').startup(function(use)
         vim.cmd('colorscheme rose-pine') end })
 
 
-        use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-        use('nvim-treesitter/playground')
+use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+use('nvim-treesitter/playground')
 
-        use('mbbill/undotree') 
+    use('mbbill/undotree') 
 
-        use {
-            'VonHeikemen/lsp-zero.nvim',
-            branch = 'v2.x',
-            requires = {
-                -- LSP Support
-                {'neovim/nvim-lspconfig'},             -- Required
-                {                                      -- Optional
+    use {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v2.x',
+        requires = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},             -- Required
+            {                                      -- Optional
                 'williamboman/mason.nvim',
                 run = function()
                     pcall(vim.cmd, 'MasonUpdate')
@@ -57,12 +57,13 @@ return require('packer').startup(function(use)
         vim.keymap.set('n', "<C-Space>", nvim_tmux_nav.NvimTmuxNavigateNext)
 
     end
-
     }
+
     use {
         'numToStr/Comment.nvim',
         config = function()
             require('Comment').setup()
         end
     }
+
 end)
